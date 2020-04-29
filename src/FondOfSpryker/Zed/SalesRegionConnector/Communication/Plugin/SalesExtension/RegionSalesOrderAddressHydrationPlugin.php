@@ -2,7 +2,7 @@
 
 namespace FondOfSpryker\Zed\SalesRegionConnector\Communication\Plugin\SalesExtension;
 
-use FondOfSpryker\Zed\Sales\Dependency\Plugin\SalesOrderAddressHydrationPluginInterface;
+use FondOfSpryker\Zed\SalesExtension\Dependency\Plugin\SalesOrderAddressHydrationPluginInterface;
 use Generated\Shared\Transfer\AddressTransfer;
 use Orm\Zed\Sales\Persistence\SpySalesOrderAddress;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
