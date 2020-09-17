@@ -5,12 +5,12 @@ namespace FondOfSpryker\Zed\SalesRegionConnector\Business\Expander;
 use FondOfSpryker\Zed\SalesRegionConnector\Dependency\Facade\SalesRegionConnectorToCountryFacadeInterface;
 use Generated\Shared\Transfer\AddressTransfer;
 
-class OrderAddressExpander
+class OrderAddressExpander implements OrderAddressExpanderInterface
 {
     /**
-     * @var \FondOfSpryker\Zed\Country\Business\CountryFacade
+     * @var \FondOfSpryker\Zed\SalesRegionConnector\Dependency\Facade\SalesRegionConnectorToCountryFacadeInterface
      */
-    private $countryFacade;
+    protected $countryFacade;
 
     /**
      * @param \FondOfSpryker\Zed\SalesRegionConnector\Dependency\Facade\SalesRegionConnectorToCountryFacadeInterface $countryFacade
