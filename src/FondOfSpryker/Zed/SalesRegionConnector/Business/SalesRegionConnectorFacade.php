@@ -30,4 +30,14 @@ class SalesRegionConnectorFacade extends AbstractFacade implements SalesRegionCo
             $salesOrderAddressEntity
         );
     }
+
+    /**
+     * @param \Generated\Shared\Transfer\AddressTransfer $addressTransfer
+     *
+     * @return \Generated\Shared\Transfer\AddressTransfer
+     */
+    public function expandOrderAddressWithRegion(AddressTransfer $addressTransfer): AddressTransfer
+    {
+        return $this->getFactory()->createOrderAddressExpander()->expandWithRegion($addressTransfer);
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace FondOfSpryker\Zed\SalesRegionConnector\Business;
 
+use FondOfSpryker\Zed\SalesRegionConnector\Business\Expander\OrderAddressExpander;
 use FondOfSpryker\Zed\SalesRegionConnector\Business\Model\SalesOrderAddressHydrator;
 use FondOfSpryker\Zed\SalesRegionConnector\Business\Model\SalesOrderAddressHydratorInterface;
 use FondOfSpryker\Zed\SalesRegionConnector\Dependency\Facade\SalesRegionConnectorToCountryFacadeInterface;
@@ -16,6 +17,11 @@ class SalesRegionConnectorBusinessFactory extends AbstractBusinessFactory
     public function createSalesOrderAddressHydrator(): SalesOrderAddressHydratorInterface
     {
         return new SalesOrderAddressHydrator($this->getCountryFacade());
+    }
+
+    public function createOrderAddressExpander()
+    {
+        return new OrderAddressExpander($this->getCountryFacade());
     }
 
     /**

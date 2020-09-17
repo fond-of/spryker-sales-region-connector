@@ -22,4 +22,16 @@ interface SalesRegionConnectorFacadeInterface
         AddressTransfer $addressTransfer,
         SpySalesOrderAddress $salesOrderAddressEntity
     ): SpySalesOrderAddress;
+
+    /**
+     * Specification:
+     * - Expand address transfer with region foreign key
+     *
+     * @api
+     *
+     * @param \Generated\Shared\Transfer\AddressTransfer $addressTransfer
+     *
+     * @return \Generated\Shared\Transfer\AddressTransfer
+     */
+    public function expandOrderAddressWithRegion(AddressTransfer $addressTransfer): AddressTransfer;
 }
